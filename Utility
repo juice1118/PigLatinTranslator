@@ -1,0 +1,94 @@
+/*The PigLatinUtility class contains methods which do basic processing
+ * 
+ * @authors Nikhil Maserang and Julius Gomez
+ * @version 1.0
+ * @since 2018-11-28
+ */
+
+import java.util.ArrayList;
+
+public class PigLatinUtility
+{
+  //adds a space after each line drop and logs the positions of all spaces/////////////////////////////////////////////
+  public static int[] spaceIndexes(String input)
+  {
+    
+    //if input is a single word
+    if(input.indexOf(' ') == -1 && input.indexOf( (char)(10) ) == -1)
+    {
+      int[] output = new int[0];
+      return output;
+    }
+    
+    //finds positions of spaces
+    int maxLineDrops = 30;
+    ArrayList<Integer> spacePositions= new ArrayList<Integer>(0);
+    spacePositions.add(0);
+    for(int index = 0; index < input.length() + maxLineDrops; index++)
+    {
+      if(index > input.length() - 2)
+      {
+      }
+      else if(input.charAt(index) == 10)
+      {
+        input = input.substring(0, index + 1) + ' ' + input.substring(index + 2, input.length());
+      }
+      else if(input.charAt(index) == ' ')
+      {
+        spacePositions.add(index);
+      }
+    }
+    spacePositions.add(input.length());
+    
+    //convert to int[]
+    Integer[] out = spacePositions.toArray(new Integer[spacePositions.size()]);
+    int[] output = new int[spacePositions.size()];
+    for(int index = 0; index < spacePositions.size(); index++)
+    {
+      output[index] = out[index];
+    }
+    return output;
+  }
+  
+  //breaks sentence into String[] by words/////////////////////////////////////////////////////////////////////////////
+  public static String[] stringToArray(String input, int[] positions)
+  {
+    //if no spaces
+    if(positions.length == 0)
+    {
+    String[] output = new String[1];
+    output[0] = input;
+    return output;
+    }
+    
+    String[] output = new String[positions.length + 1];
+    for( int index = 0; index < positions.length - 1; index++ )
+    {
+      output[index] = input.substring(positions[index] + 1, positions[index + 1]);
+    }
+    return output;
+  }
+  
+  //feeds String[] into translator to be translated into another String[]//////////////////////////////////////////////
+  public static String[] feedWords(String[] input)
+  {
+    String[] output = new String[input.length];
+    for(int index = 0; index < input.length; index++)
+    {
+      output[index] = PigLatinTranslator2.translate(input[index]);
+    }
+    return output;
+  }
+  
+  //recombines translated words into a string./////////////////////////////////////////////////////////////////////////
+  public static String arrayToString(String[] input)
+  {
+    String output = new String("");
+    for( int index = 0; index < input.length; index++)
+    {
+      output += input[index] + " ";
+    }
+    output.trim();
+    return output;
+  } 
+}

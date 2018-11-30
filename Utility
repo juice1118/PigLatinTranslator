@@ -9,6 +9,7 @@ import java.util.ArrayList;
 
 public class Utility
 {
+  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   public static String totalTranslate(String input)
   {
     return ( arrayToString( feedWords( stringToArray( input, spaceIndexes(input) ) ) ) );

@@ -1,7 +1,7 @@
 import java.awt.event.*;
 import javax.swing.*;
 
-class PigLatinTranslatorBoxDriver
+public class Box
 {
   public static void main(String[] args)
   {

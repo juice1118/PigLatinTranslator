@@ -396,7 +396,7 @@ public class Translator
   /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   public static String translate(String input)
   {
-    if(input.startsWith($) || input.startsWith(%))
+    if(input.startsWith("$") || input.startsWith("%"))
     {
       return input;
     }
@@ -404,7 +404,7 @@ public class Translator
     {
       return input;
     }
-    if(input.contains(@))
+    if(input.contains("@"))
     {
       return input;
     }

@@ -25,7 +25,7 @@ class PigLatinTranslatorBoxDriver
      {
       public void actionPerformed(ActionEvent e)
         {//pig latin translation         
-          outputtf.setText( Utility.totalTranslate(inputtf.getText()) );
+          outputtf.setText( Utility.totalTranslate( inputtf.getText()) );
         }
      }
     );

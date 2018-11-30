@@ -361,30 +361,30 @@ public class Translator
   {
     int forwardSlashPosition = input.indexOf('/');
     int dashPosition         = input.indexOf('-');
-    int backSlashPosition    = input.indexOf('\');
+    int backSlashPosition    = input.indexOf('\\');
     int centralSlashPosition = input.indexOf('|');
     String firstHalf = new String("");
     String lastHalf = new String("");
     
-    if( !(forwardSlashPosition == -1)
+    if( !(forwardSlashPosition == -1) )
     {
      firstHalf = input.substring(0, forwardSlashPosition);
      lastHalf = input.substring(forwardSlashPosition + 1, input.length());
      return (translate(firstHalf) + "/" + translate(lastHalf));
     }
-    if( !(dashPosition == -1)
+    if( !(dashPosition == -1) )
     {
      firstHalf = input.substring(0, dashPosition);
      lastHalf = input.substring(dashPosition + 1, input.length());
      return (translate(firstHalf) + "-" + translate(lastHalf));
     }
-    if( !(backSlashPosition == -1)
+    if( !(backSlashPosition == -1) )
     {
      firstHalf = input.substring(0, backSlashPosition);
      lastHalf = input.substring(backSlashPosition + 1, input.length());
-     return (translate(firstHalf) + "\" + translate(lastHalf));
+     return (translate(firstHalf) + "\\" + translate(lastHalf));
     }
-    if( !(centralSlashPosition == -1)
+    if( !(centralSlashPosition == -1) )
     {
      firstHalf = input.substring(0, centralSlashPosition);
      lastHalf = input.substring(centralSlashPosition + 1, input.length());

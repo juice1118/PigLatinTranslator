@@ -1,0 +1,41 @@
+import java.awt.event.*;
+import javax.swing.*;
+
+class PigLatinTranslatorBoxDriver
+{
+  public static void main(String[] args)
+  {
+    //makes a box
+    JFrame f=new JFrame("PigLatinTranslator");
+
+    //makes a text field and sets its bounds
+    final JTextArea inputtf = new JTextArea("Enter text to be translated.");
+    inputtf.setBounds(45, 50, 900, 30);
+    
+    //makes an output text field and sets its bounds
+    final JTextArea outputtf = new JTextArea("Enterway exttay otay ebay anslatedtray.");
+    outputtf.setBounds(45, 150, 900, 30);
+    
+    //makes a button and sets its bounds
+    JButton b = new JButton("Translate");
+    b.setBounds(50,100,95,30);
+    
+    //sets action to occur when the button is clicked
+    b.addActionListener(new ActionListener()
+     {
+      public void actionPerformed(ActionEvent e)
+        {//pig latin translation         
+          outputtf.setText( Utility.totalTranslate(inputtf.getText()) );
+        }
+     }
+    );
+    
+    f.add(b);
+    f.add(inputtf);
+    f.add(outputtf);
+    f.setSize(1000, 275);
+    f.setLayout(null);
+    f.setVisible(true);
+  }
+}
+

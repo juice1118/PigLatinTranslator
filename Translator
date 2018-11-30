@@ -276,9 +276,16 @@ public class PigLatinTranslator2
   public static String splitWordTranslate(String input)
   {
     int forwardSlashPosition = input.indexOf('/');
-    int dashPosition = input.indexOf( '-');
-    int backSlashPosition = input.indexOf('\');
+    int dashPosition         = input.indexOf('-');
+    int backSlashPosition    = input.indexOf('\');
     int centralSlashPosition = input.indexOf('|');
+    String firstHalf = new String("");
+    String lastHalf = new String("");
+    
+    if( !(forwarSlashPosition == -1)
+    {
+    
+    }
     
   }
   

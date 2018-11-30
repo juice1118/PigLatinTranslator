@@ -44,6 +44,7 @@ public class PigLatinTranslator2
                                  input.charAt(5) == '\'' ||
                                  input.charAt(5) == '(' ||
                                  input.charAt(5) == '[' ||
+                                 input.charAt(5) == '<' ||
                                  input.charAt(5) == '{' ) )
     {
       return input.substring(0, 6);
@@ -52,6 +53,7 @@ public class PigLatinTranslator2
                                       input.charAt(4) == '\'' ||
                                       input.charAt(4) == '(' ||
                                       input.charAt(4) == '[' ||
+                                      input.charAt(4) == '<' ||
                                       input.charAt(4) == '{' ) )
     {
       return input.substring(0, 5);
@@ -60,6 +62,7 @@ public class PigLatinTranslator2
                                       input.charAt(3) == '\'' ||
                                       input.charAt(3) == '(' ||
                                       input.charAt(3) == '[' ||
+                                      input.charAt(3) == '<' ||
                                       input.charAt(3) == '{' ) )
     {
       return input.substring(0, 4);
@@ -68,6 +71,7 @@ public class PigLatinTranslator2
                                       input.charAt(2) == '\'' ||
                                       input.charAt(2) == '(' ||
                                       input.charAt(2) == '[' ||
+                                      input.charAt(2) == '<' ||
                                       input.charAt(2) == '{' ) )
     {
       return input.substring(0, 3);
@@ -76,6 +80,7 @@ public class PigLatinTranslator2
                                       input.charAt(1) == '\'' ||
                                       input.charAt(1) == '(' ||
                                       input.charAt(1) == '[' ||
+                                      input.charAt(1) == '<' ||
                                       input.charAt(1) == '{' ) )
     {
       return input.substring(0, 2);
@@ -84,6 +89,7 @@ public class PigLatinTranslator2
                                       input.charAt(0) == '\'' ||
                                       input.charAt(0) == '(' ||
                                       input.charAt(0) == '[' ||
+                                      input.charAt(0) == '<' ||
                                       input.charAt(0) == '{' ) )
     {
       return input.substring(0, 1);
@@ -103,6 +109,12 @@ public class PigLatinTranslator2
                                  input.charAt(input.length() - 6) == '\'' ||
                                  input.charAt(input.length() - 6) == ')' ||
                                  input.charAt(input.length() - 6) == ']' ||
+                                 input.charAt(input.length() - 6) == '?' ||
+                                 input.charAt(input.length() - 6) == '>' ||
+                                 input.charAt(input.length() - 6) == ',' ||
+                                 input.charAt(input.length() - 6) == ';' ||
+                                 input.charAt(input.length() - 6) == ':' ||
+                                 input.charAt(input.length() - 6) == '!' ||
                                  input.charAt(input.length() - 6) == '}' ) )
     {
       if( !(input.charAt(input.length() - 5) > 96 ||input.charAt(input.length() - 5) < 123) )
@@ -112,6 +124,12 @@ public class PigLatinTranslator2
                                       input.charAt(input.length() - 5) == '\'' ||
                                       input.charAt(input.length() - 5) == ')' ||
                                       input.charAt(input.length() - 5) == ']' ||
+                                      input.charAt(input.length() - 5) == '?' ||
+                                      input.charAt(input.length() - 5) == '>' ||
+                                      input.charAt(input.length() - 5) == ',' ||
+                                      input.charAt(input.length() - 5) == ';' ||
+                                      input.charAt(input.length() - 5) == ':' ||
+                                      input.charAt(input.length() - 5) == '!' ||
                                       input.charAt(input.length() - 5) == '}' ) )
     {
       if( !(input.charAt(input.length() - 4) > 96 ||input.charAt(input.length() - 4) < 123) )
@@ -121,6 +139,12 @@ public class PigLatinTranslator2
                                       input.charAt(input.length() - 4) == '\'' ||
                                       input.charAt(input.length() - 4) == ')' ||
                                       input.charAt(input.length() - 4) == ']' ||
+                                      input.charAt(input.length() - 4) == '?' ||
+                                      input.charAt(input.length() - 4) == '>' ||
+                                      input.charAt(input.length() - 4) == ',' ||
+                                      input.charAt(input.length() - 4) == ';' ||
+                                      input.charAt(input.length() - 4) == ':' ||
+                                      input.charAt(input.length() - 4) == '!' ||
                                       input.charAt(input.length() - 4) == '}' ) )
     {
       if( !(input.charAt(input.length() - 3) > 96 ||input.charAt(input.length() - 3) < 123) )
@@ -130,6 +154,12 @@ public class PigLatinTranslator2
                                       input.charAt(input.length() - 3) == '\'' ||
                                       input.charAt(input.length() - 3) == ')' ||
                                       input.charAt(input.length() - 3) == ']' ||
+                                      input.charAt(input.length() - 3) == '?' ||
+                                      input.charAt(input.length() - 3) == '>' ||
+                                      input.charAt(input.length() - 3) == ',' ||
+                                      input.charAt(input.length() - 3) == ';' ||
+                                      input.charAt(input.length() - 3) == ':' ||
+                                      input.charAt(input.length() - 3) == '!' ||
                                       input.charAt(input.length() - 3) == '}' ) )
     {
       if( !(input.charAt(input.length() - 2) > 96 ||input.charAt(input.length() - 2) < 123) )
@@ -139,6 +169,12 @@ public class PigLatinTranslator2
                                       input.charAt(input.length() - 2) == '\'' ||
                                       input.charAt(input.length() - 2) == ')' ||
                                       input.charAt(input.length() - 2) == ']' ||
+                                      input.charAt(input.length() - 2) == '?' ||
+                                      input.charAt(input.length() - 2) == '>' ||
+                                      input.charAt(input.length() - 2) == ',' ||
+                                      input.charAt(input.length() - 2) == ';' ||
+                                      input.charAt(input.length() - 2) == ':' ||
+                                      input.charAt(input.length() - 2) == '!' ||
                                       input.charAt(input.length() - 2) == '}' ) )
     {
       if( !(input.charAt(input.length() - 1) > 96 ||input.charAt(input.length() - 1) < 123) )
@@ -148,6 +184,12 @@ public class PigLatinTranslator2
                                       input.charAt(input.length() - 1) == '\'' ||
                                       input.charAt(input.length() - 1) == ')' ||
                                       input.charAt(input.length() - 1) == ']' ||
+                                      input.charAt(input.length() - 1) == '?' ||
+                                      input.charAt(input.length() - 1) == '>' ||
+                                      input.charAt(input.length() - 1) == ',' ||
+                                      input.charAt(input.length() - 1) == ';' ||
+                                      input.charAt(input.length() - 1) == ':' ||
+                                      input.charAt(input.length() - 1) == '!' ||
                                       input.charAt(input.length() - 1) == '}' ) )
     {
       return input.substring(input.length() - 1, input.length());
@@ -162,6 +204,7 @@ public class PigLatinTranslator2
                                  input.charAt(5) == '\'' ||
                                  input.charAt(5) == '(' ||
                                  input.charAt(5) == '[' ||
+                                 input.charAt(5) == '<' ||
                                  input.charAt(5) == '{' ) )
     {
       return input.substring(6, input.length());
@@ -170,6 +213,7 @@ public class PigLatinTranslator2
                                       input.charAt(4) == '\'' ||
                                       input.charAt(4) == '(' ||
                                       input.charAt(4) == '[' ||
+                                      input.charAt(4) == '<' ||
                                       input.charAt(4) == '{' ) )
     {
       return input.substring(5, input.length());
@@ -178,6 +222,7 @@ public class PigLatinTranslator2
                                       input.charAt(3) == '\'' ||
                                       input.charAt(3) == '(' ||
                                       input.charAt(3) == '[' ||
+                                      input.charAt(3) == '<' ||
                                       input.charAt(3) == '{' ) )
     {
       return input.substring(4, input.length());
@@ -186,6 +231,7 @@ public class PigLatinTranslator2
                                       input.charAt(2) == '\'' ||
                                       input.charAt(2) == '(' ||
                                       input.charAt(2) == '[' ||
+                                      input.charAt(2) == '<' ||
                                       input.charAt(2) == '{' ) )
     {
       return input.substring(3, input.length());
@@ -194,6 +240,7 @@ public class PigLatinTranslator2
                                       input.charAt(1) == '\'' ||
                                       input.charAt(1) == '(' ||
                                       input.charAt(1) == '[' ||
+                                      input.charAt(4) == '<' ||
                                       input.charAt(1) == '{' ) )
     {
       return input.substring(2, input.length());
@@ -202,6 +249,7 @@ public class PigLatinTranslator2
                                       input.charAt(0) == '\'' ||
                                       input.charAt(0) == '(' ||
                                       input.charAt(0) == '[' ||
+                                      input.charAt(0) == '<' ||
                                       input.charAt(0) == '{' ) )
     {
       return input.substring(1, input.length());
@@ -221,52 +269,88 @@ public class PigLatinTranslator2
                                  input.charAt(input.length() - 6) == '\'' ||
                                  input.charAt(input.length() - 6) == ')' ||
                                  input.charAt(input.length() - 6) == ']' ||
+                                 input.charAt(input.length() - 6) == '?' ||
+                                 input.charAt(input.length() - 6) == '>' ||
+                                 input.charAt(input.length() - 6) == ',' ||
+                                 input.charAt(input.length() - 6) == ';' ||
+                                 input.charAt(input.length() - 6) == ':' ||
+                                 input.charAt(input.length() - 6) == '!' ||
                                  input.charAt(input.length() - 6) == '}' ) )
     {
       if( !(input.charAt(input.length() - 5) > 96 ||input.charAt(input.length() - 5) < 123) )
       return input.substring(0, input.length() - 6);
     }
     if( (input.length() > 4) && (input.charAt(input.length() - 5) == '\"' ||
-                                      input.charAt(input.length() - 5) == '\'' ||
-                                      input.charAt(input.length() - 5) == ')' ||
-                                      input.charAt(input.length() - 5) == ']' ||
-                                      input.charAt(input.length() - 5) == '}' ) )
+                                 input.charAt(input.length() - 5) == '\'' ||
+                                 input.charAt(input.length() - 5) == ')' ||
+                                 input.charAt(input.length() - 5) == ']' ||
+                                 input.charAt(input.length() - 5) == '?' ||
+                                 input.charAt(input.length() - 5) == '>' ||
+                                 input.charAt(input.length() - 5) == ',' ||
+                                 input.charAt(input.length() - 5) == ';' ||
+                                 input.charAt(input.length() - 5) == ':' ||
+                                 input.charAt(input.length() - 5) == '!' ||
+                                 input.charAt(input.length() - 5) == '}' ) )
     {
       if( !(input.charAt(input.length() - 4) > 96 ||input.charAt(input.length() - 4) < 123) )
       return input.substring(0, input.length() - 5);
     }
     if( (input.length() > 3) && (input.charAt(input.length() - 4) == '\"' ||
-                                      input.charAt(input.length() - 4) == '\'' ||
-                                      input.charAt(input.length() - 4) == ')' ||
-                                      input.charAt(input.length() - 4) == ']' ||
-                                      input.charAt(input.length() - 4) == '}' ) )
+                                 input.charAt(input.length() - 4) == '\'' ||
+                                 input.charAt(input.length() - 4) == ')' ||
+                                 input.charAt(input.length() - 4) == ']' ||
+                                 input.charAt(input.length() - 4) == '?' ||
+                                 input.charAt(input.length() - 4) == '>' ||
+                                 input.charAt(input.length() - 4) == ',' ||
+                                 input.charAt(input.length() - 4) == ';' ||
+                                 input.charAt(input.length() - 4) == ':' ||
+                                 input.charAt(input.length() - 4) == '!' ||
+                                 input.charAt(input.length() - 4) == '}' ) )
     {
       if( !(input.charAt(input.length() - 3) > 96 ||input.charAt(input.length() - 3) < 123) )
       return input.substring(0, input.length() - 4);
     }
     if( (input.length() > 2) && (input.charAt(input.length() - 3) == '\"' ||
-                                      input.charAt(input.length() - 3) == '\'' ||
-                                      input.charAt(input.length() - 3) == '(' ||
-                                      input.charAt(input.length() - 3) == '[' ||
-                                      input.charAt(input.length() - 3) == '{' ) )
+                                 input.charAt(input.length() - 3) == '\'' ||
+                                 input.charAt(input.length() - 3) == '(' ||
+                                 input.charAt(input.length() - 3) == '[' ||
+                                 input.charAt(input.length() - 3) == '?' ||
+                                 input.charAt(input.length() - 3) == '>' ||
+                                 input.charAt(input.length() - 3) == ',' ||
+                                 input.charAt(input.length() - 3) == ';' ||
+                                 input.charAt(input.length() - 3) == ':' ||
+                                 input.charAt(input.length() - 3) == '!' ||
+                                 input.charAt(input.length() - 3) == '{' ) )
     {
       if( !(input.charAt(input.length() - 2) > 96 ||input.charAt(input.length() - 2) < 123) )
       return input.substring(0, input.length() - 3);
     }
     if( (input.length() > 1) && (input.charAt(input.length() - 2) == '\"' ||
-                                      input.charAt(input.length() - 2) == '\'' ||
-                                      input.charAt(input.length() - 2) == ')' ||
-                                      input.charAt(input.length() - 2) == ']' ||
-                                      input.charAt(input.length() - 2) == '}' ) )
+                                 input.charAt(input.length() - 2) == '\'' ||
+                                 input.charAt(input.length() - 2) == ')' ||
+                                 input.charAt(input.length() - 2) == ']' ||
+                                 input.charAt(input.length() - 2) == '?' ||
+                                 input.charAt(input.length() - 2) == '>' ||
+                                 input.charAt(input.length() - 2) == ',' ||
+                                 input.charAt(input.length() - 2) == ';' ||
+                                 input.charAt(input.length() - 2) == ':' ||
+                                 input.charAt(input.length() - 2) == '!' ||
+                                 input.charAt(input.length() - 2) == '}' ) )
     {
       if( !(input.charAt(input.length() - 1) > 96 ||input.charAt(input.length() - 1) < 123) )
       return input.substring(0, input.length() - 2);
     }
     if( (input.length() > 0) && (input.charAt(input.length() - 1) == '\"' ||
-                                      input.charAt(input.length() - 1) == '\'' ||
-                                      input.charAt(input.length() - 1) == ')' ||
-                                      input.charAt(input.length() - 1) == ']' ||
-                                      input.charAt(input.length() - 1) == '}' ) )
+                                 input.charAt(input.length() - 1) == '\'' ||
+                                 input.charAt(input.length() - 1) == ')' ||
+                                 input.charAt(input.length() - 1) == ']' ||
+                                 input.charAt(input.length() - 1) == '?' ||
+                                 input.charAt(input.length() - 1) == '>' ||
+                                 input.charAt(input.length() - 1) == ',' ||
+                                 input.charAt(input.length() - 1) == ';' ||
+                                 input.charAt(input.length() - 1) == ':' ||
+                                 input.charAt(input.length() - 1) == '!' ||
+                                 input.charAt(input.length() - 1) == '}' ) )
     {
       return input.substring(0, input.length() - 1);
     }
@@ -324,9 +408,68 @@ public class PigLatinTranslator2
     {
       return input;
     }
+    
+    if( input.toLowerCase().equals("a") )
+    {
+      output = input;
+    }
+      else if( input.toLowerCase().equals("i") )
+    {
+      output = input;
+    }
+      else if( input.toLowerCase().startsWith("qu") )
+    {
+      output = input.substring(2, input.length()) + input.toLowerCase().substring(0, 2) + "ay";
+    }
+      
     if( input.charAt(0) > 96 && input.charAt(0) < 123)
     {
+     //determine if word length is sufficient to check for 3 letter consonant cluster, then if it is, check for it
+      else if( (input.length() >= 3) && (!(input.toLowerCase().charAt(0) == 'a' ||
+            input.toLowerCase().charAt(0) == 'e' ||
+            input.toLowerCase().charAt(0) == 'i' ||
+            input.toLowerCase().charAt(0) == 'o' ||
+            input.toLowerCase().charAt(0) == 'u') &&
+          !(input.toLowerCase().charAt(1) == 'a' ||
+            input.toLowerCase().charAt(1) == 'e' ||
+            input.toLowerCase().charAt(1) == 'i' ||
+            input.toLowerCase().charAt(1) == 'o' ||
+            input.toLowerCase().charAt(1) == 'u') &&
+          !(input.toLowerCase().charAt(2) == 'a' ||
+            input.toLowerCase().charAt(2) == 'e' ||
+            input.toLowerCase().charAt(2) == 'i' ||
+            input.toLowerCase().charAt(2) == 'o' ||
+            input.toLowerCase().charAt(2) == 'u') ) )
+      {//move first three letters to back and add "ay"
+        output = input.substring(3, input.length()) + input.toLowerCase().substring(0, 3) + "ay";
+      }//determine if word length is sufficient to check for 2 letter consonant cluster, then if it is, check for it
+      else if( (input.length() >= 2) && (!(input.toLowerCase().charAt(0) == 'a' ||
+                 input.toLowerCase().charAt(0) == 'e' ||
+                 input.toLowerCase().charAt(0) == 'i' ||
+                 input.toLowerCase().charAt(0) == 'o' ||
+                 input.toLowerCase().charAt(0) == 'u') &&
+               !(input.toLowerCase().charAt(1) == 'a' ||
+                 input.toLowerCase().charAt(1) == 'e' ||
+                 input.toLowerCase().charAt(1) == 'i' ||
+                 input.toLowerCase().charAt(1) == 'o' ||
+                 input.toLowerCase().charAt(1) == 'u') ) )
+      {//move first two letters to back and add "ay"
+        output = input.substring(2, input.length()) + input.toLowerCase().substring(0, 2) + "ay";
+      }//determine if first letter is a consonant
+      else if( !(input.toLowerCase().charAt(0) == 'a' ||
+                 input.toLowerCase().charAt(0) == 'e' || 
+                 input.toLowerCase().charAt(0) == 'i' || 
+                 input.toLowerCase().charAt(0) == 'o' || 
+                 input.toLowerCase().charAt(0) == 'u' ) )
+      {//move consonant to back and add "ay"
+        output = input.substring(1, input.length()) + input.toLowerCase().charAt(0) + "ay";
+      }
+      else//if it starts with a vowel
+      {//add "way" to end
+        output = input + "way";
+      }
     }
+    return input;
   }
   
   //add the punctuation back to the translated word////////////////////////////////////////////////////////////////////

@@ -363,6 +363,7 @@ public class Translator
     int dashPosition         = input.indexOf('-');
     int backSlashPosition    = input.indexOf('\\');
     int centralSlashPosition = input.indexOf('|');
+    
     String firstHalf = new String("");
     String lastHalf = new String("");
     
@@ -390,7 +391,7 @@ public class Translator
      lastHalf = input.substring(centralSlashPosition + 1, input.length());
      return (translate(firstHalf) + "|" + translate(lastHalf));
     }
-    
+    return ("");
   }
   
   /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -466,7 +467,7 @@ public class Translator
       }
       else//if it starts with a vowel
       {//add "way" to end
-        output = input + "way";
+        return input + "way";
       }
     }
     return input;

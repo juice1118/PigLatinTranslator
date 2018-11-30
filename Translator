@@ -1,8 +1,8 @@
-/*The PigLatinTranslator2 class contains methods translate individual words into piglatin
+/*The Translator class contains methods translate individual words into piglatin
  * 
  * @authors Nikhil Maserang and Julius Gomez
  * @version 1.0
- * @since 2018-11-28
+ * @since 2018-11-30
  */
 
 public class Translator
@@ -409,7 +409,6 @@ public class Translator
     {
       return input;
     }
-    
     if( input.toLowerCase().equals("a") )
     {
       return input;
@@ -420,12 +419,11 @@ public class Translator
     }
       else if( input.toLowerCase().startsWith("qu") )
     {
-      return input.substring(2, input.length()) + input.toLowerCase().substring(0, 2) + "ay";
+      return ( input.toUpperCase().charAt(2) + input.substring(3, input.length()) + "quay" );
     }
       
     if( input.charAt(0) > 96 && input.charAt(0) < 123)
     {
-     //determine if word length is sufficient to check for 3 letter consonant cluster, then if it is, check for it
       if( (input.length() >= 3) && (!(input.toLowerCase().charAt(0) == 'a' ||
             input.toLowerCase().charAt(0) == 'e' ||
             input.toLowerCase().charAt(0) == 'i' ||
@@ -441,9 +439,9 @@ public class Translator
             input.toLowerCase().charAt(2) == 'i' ||
             input.toLowerCase().charAt(2) == 'o' ||
             input.toLowerCase().charAt(2) == 'u') ) )
-      {//move first three letters to back and add "ay"
-        return input.substring(3, input.length()) + input.toLowerCase().substring(0, 3) + "ay";
-      }//determine if word length is sufficient to check for 2 letter consonant cluster, then if it is, check for it
+      {
+        return ( input.toUpperCase().charAt(3) + input.substring(4, input.length()) + input.toLowerCase().substring(0, 3) + "ay" );
+      }
       else if( (input.length() >= 2) && (!(input.toLowerCase().charAt(0) == 'a' ||
                  input.toLowerCase().charAt(0) == 'e' ||
                  input.toLowerCase().charAt(0) == 'i' ||
@@ -454,19 +452,19 @@ public class Translator
                  input.toLowerCase().charAt(1) == 'i' ||
                  input.toLowerCase().charAt(1) == 'o' ||
                  input.toLowerCase().charAt(1) == 'u') ) )
-      {//move first two letters to back and add "ay"
-        return input.substring(2, input.length()) + input.toLowerCase().substring(0, 2) + "ay";
-      }//determine if first letter is a consonant
+      {
+        return ( input.toUpperCase().charAt(2) + input.substring(3, input.length()) + input.toLowerCase().substring(0, 2) + "ay" );
+      }
       else if( !(input.toLowerCase().charAt(0) == 'a' ||
                  input.toLowerCase().charAt(0) == 'e' || 
                  input.toLowerCase().charAt(0) == 'i' || 
                  input.toLowerCase().charAt(0) == 'o' || 
                  input.toLowerCase().charAt(0) == 'u' ) )
-      {//move consonant to back and add "ay"
-       return input.substring(1, input.length()) + input.toLowerCase().charAt(0) + "ay";
+      {
+       return ( input.toUpperCase().charAt(1) + input.substring(2, input.length()) + input.toLowerCase().substring(0, 1) + "ay" );
       }
-      else//if it starts with a vowel
-      {//add "way" to end
+      else
+      {
         return input + "way";
       }
     }
@@ -486,4 +484,4 @@ public class Translator
     }
     return output;
   }
-}
+}//end class

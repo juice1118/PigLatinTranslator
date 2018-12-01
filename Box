@@ -29,7 +29,7 @@ public class Box {
 	    outputtf.setFont(new Font("Serif", 3, 15));
 	    
 	    //sets text field to hold instructions
-	    final JTextArea instructionstf = new JTextArea("Enter text to be translated. Do Not Exceed This Length On One Line.------------------------------------------|");
+	    final JTextArea instructionstf = new JTextArea("Enter text to be translated. Do Not Exceed This Length On One Line.---------------------------------------------|");
 	    instructionstf.setBounds(45, 5, 1265, 275);
 	    instructionstf.setEditable(false);
 	    instructionstf.setFont(new Font("SansSerif", 3, 15));
@@ -70,18 +70,19 @@ public class Box {
 	          outputtf.setText("");
 	          instructionstf.setVisible(true);
 	          extratf.setVisible(true);
-	          instructionstf.setText("Enter text to be translated. Do Not Exceed This Length On One Line.------------------------------------------|");
+	          instructionstf.setText("Enter text to be translated. Do Not Exceed This Length On One Line.---------------------------------------------|");
 	        }
 	     }
 	    );
 	    
-	    f.getContentPane().setBackground( new Color(153, 102, 255) );
+	    f.getContentPane().setBackground( new Color(120, 102, 200) );
 	    
 	    //set background and text box colors
-	    inputtf.setBackground       ( new Color(102, 102, 155) );
-	    instructionstf.setBackground( new Color(102, 102, 155) );
-	    outputtf.setBackground      ( new Color(102, 102, 155) );
-	    extratf.setBackground       ( new Color(102, 102, 155) );
+	    Color areaColor = new Color(102, 102, 155);
+	    inputtf.setBackground       ( areaColor );
+	    instructionstf.setBackground( areaColor );
+	    outputtf.setBackground      ( areaColor );
+	    extratf.setBackground       ( areaColor );
 	    
 	    //set text color
 	    Color textColor = new Color(0, 204, 102);

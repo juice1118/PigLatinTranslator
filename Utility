@@ -80,7 +80,7 @@ public class Utility
     String[] output = new String[input.length];
     for(int index = 0; index < input.length; index++)
     {
-      output[index] = PigLatinTranslator2.translate(input[index]);
+      output[index] = Translator.translate(input[index]);
     }
     return output;
   }

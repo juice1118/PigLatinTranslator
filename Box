@@ -15,7 +15,8 @@ public class Box {
 	  {
 	    //makes a box
 	    JFrame f=new JFrame("PigLatinTranslator");
-
+        
+	    
 	    //makes a text field and sets its bounds
 	    final JTextArea inputtf = new JTextArea("");
 	    inputtf.setBounds(45, 25, 1265, 275);
@@ -51,10 +52,10 @@ public class Box {
 	     {
 	    	//pig latin translation
 	      public void actionPerformed(ActionEvent e)
-	        {         
-	          outputtf.setText( Utility.totalTranslate( inputtf.getText()) );
-	          instructionstf.setVisible(false);
-	          extratf.setVisible(false);
+	        {
+	    		outputtf.setText( Utility.totalTranslate( inputtf.getText()) );
+		        instructionstf.setVisible(false);
+		        extratf.setVisible(false);
 	        }
 	     }
 	    );
@@ -74,11 +75,21 @@ public class Box {
 	     }
 	    );
 	    
-	    f.getContentPane().setBackground( new Color(7, 134, 66) );
-	    inputtf.setBackground( new Color(7, 134, 117) );
-	    outputtf.setBackground( new Color(7, 134, 117) );
-	    instructionstf.setBackground( new Color(7, 134, 117) );
-	    extratf.setBackground( new Color(7, 134, 117) );
+	    f.getContentPane().setBackground( new Color(153, 102, 255) );
+	    
+	    //set background and text box colors
+	    inputtf.setBackground       ( new Color(102, 102, 155) );
+	    instructionstf.setBackground( new Color(102, 102, 155) );
+	    outputtf.setBackground      ( new Color(102, 102, 155) );
+	    extratf.setBackground       ( new Color(102, 102, 155) );
+	    
+	    //set text color
+	    Color textColor = new Color(0, 204, 102);
+	    inputtf.setForeground       ( textColor);
+	    instructionstf.setForeground( textColor);
+	    outputtf.setForeground      ( textColor);
+	    extratf.setForeground       ( textColor);
+
 	    
 	    f.add(b);
 	    f.add(c);

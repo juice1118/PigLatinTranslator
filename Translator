@@ -223,7 +223,7 @@ public class Translator {
 	    return ("");
 	  }
 	  
-	  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	  //remove start punct///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	  public static String removeStartPunct(String input)
 	  {
 		if(input.length() == 0)
@@ -292,7 +292,7 @@ public class Translator {
 	    return (input);
 	  }
 	  
-	  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	  //remove end punct///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	  public static String removeEndPunct(String input)
 	  {
 		if(input.length() == 0)
@@ -396,11 +396,11 @@ public class Translator {
 	    }
 	    return (input);
 	  }
-	  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	  //split word if slash or dash are present///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	  public static String splitWordTranslate(String input)
 	  {
 	    int slashPosition = input.indexOf('/');
-	    int dashPosition         = input.indexOf('-');
+	    int dashPosition  = input.indexOf('-');
 	    
 	    String firstHalf = new String("");
 	    String lastHalf = new String("");
@@ -420,9 +420,10 @@ public class Translator {
 	    return ("");
 	  }
 	  
-	  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	  //translate english to pig latin///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	  public static String translate(String input)
 	  {
+		  //exceptions
 	    if(input.length() == 0 ||
 	       input.contains("@") ||
 	       input.charAt(0) == '$' ||
@@ -459,7 +460,7 @@ public class Translator {
 			  return ( input.substring(2, input.length()) + "quay" );
 		  }
 		    
-		    
+		  //translating
 		  if( input.toLowerCase().charAt(0) > 96 && input.toLowerCase().charAt(0) < 123)
 		  {
 		    if( (input.length() >= 3) && (!(input.toLowerCase().charAt(0) == 'a' ||

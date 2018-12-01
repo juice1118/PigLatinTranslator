@@ -57,12 +57,13 @@ public class Translator {
 	    {
 	      return "";
 	    }
-	    if( (input.length() > 5) && (input.charAt(5) == '\"' ||
-	                                 input.charAt(5) == '\'' ||
-	                                 input.charAt(5) == '(' ||
-	                                 input.charAt(5) == '[' ||
-	                                 input.charAt(5) == '<' ||
-	                                 input.charAt(5) == '{' ) )
+	    if( (input.length() > 5) &&
+	    	(input.charAt(5) == '\"' ||
+	         input.charAt(5) == '\'' ||
+	         input.charAt(5) == '(' ||
+	         input.charAt(5) == '[' ||
+	         input.charAt(5) == '<' ||
+	         input.charAt(5) == '{' ) )
 	    {
 	    	for(int i = 97; i < 123; i++)
 		    {
@@ -72,12 +73,13 @@ public class Translator {
 	    	if(bugFix)
 	    		return input.substring(0, 6);
 	    }
-	    if( (input.length() > 4) && (input.charAt(4) == '\"' ||
-	                                 input.charAt(4) == '\'' ||
-	                                 input.charAt(4) == '(' ||
-	                                 input.charAt(4) == '[' ||
-	                                 input.charAt(4) == '<' ||
-	                                 input.charAt(4) == '{' ) )
+	    if( (input.length() > 4) &&
+	    	(input.charAt(4) == '\"' ||
+	         input.charAt(4) == '\'' ||
+	         input.charAt(4) == '(' ||
+	         input.charAt(4) == '[' ||
+	         input.charAt(4) == '<' ||
+	         input.charAt(4) == '{' ) )
 	    {
 	      bugFix = true;
 	      for(int i = 97; i < 123; i++)
@@ -88,12 +90,13 @@ public class Translator {
 	    	if(bugFix)
 	    		return input.substring(0, 5);
 	    }
-	    if( (input.length() > 3) && (input.charAt(3) == '\"' ||
-	                                 input.charAt(3) == '\'' ||
-	                                 input.charAt(3) == '(' ||
-	                                 input.charAt(3) == '[' ||
-	                                 input.charAt(3) == '<' ||
-	                                 input.charAt(3) == '{' ) )
+	    if( (input.length() > 3) &&
+	    	(input.charAt(3) == '\"' ||
+	         input.charAt(3) == '\'' ||
+	         input.charAt(3) == '(' ||
+	         input.charAt(3) == '[' ||
+	         input.charAt(3) == '<' ||
+	         input.charAt(3) == '{' ) )
 	    {
 	    	bugFix = true;
 		      for(int i = 97; i < 123; i++)
@@ -104,12 +107,13 @@ public class Translator {
 		    	if(bugFix)
 		    		return input.substring(0, 4);
 	    }
-	    if( (input.length() > 2) && (input.charAt(2) == '\"' ||
-	                                 input.charAt(2) == '\'' ||
-	                                 input.charAt(2) == '(' ||
-	                                 input.charAt(2) == '[' ||
-	                                 input.charAt(2) == '<' ||
-	                                 input.charAt(2) == '{' ) )
+	    if( (input.length() > 2) &&
+	    	(input.charAt(2) == '\"' ||
+	         input.charAt(2) == '\'' ||
+	         input.charAt(2) == '(' ||
+	         input.charAt(2) == '[' ||
+	         input.charAt(2) == '<' ||
+	         input.charAt(2) == '{' ) )
 	    {
 	    	bugFix = true;
 		      for(int i = 97; i < 123; i++)
@@ -120,12 +124,13 @@ public class Translator {
 		    	if(bugFix)
 		    		return input.substring(0, 3);
 	    }
-	    if( (input.length() > 1) && (input.charAt(1) == '\"' ||
-	                                 input.charAt(1) == '\'' ||
-	                                 input.charAt(1) == '(' ||
-	                                 input.charAt(1) == '[' ||
-	                                 input.charAt(1) == '<' ||
-	                                 input.charAt(1) == '{' ) )
+	    if( (input.length() > 1) &&
+	    	(input.charAt(1) == '\"' ||
+	         input.charAt(1) == '\'' ||
+	         input.charAt(1) == '(' ||
+	         input.charAt(1) == '[' ||
+	         input.charAt(1) == '<' ||
+	         input.charAt(1) == '{' ) )
 	    {
 	    	bugFix = true;
 		      for(int i = 97; i < 123; i++)
@@ -136,12 +141,13 @@ public class Translator {
 		    	if(bugFix)
 		    		return input.substring(0, 2);
 	    }
-	    if( (input.length() > 0) && (input.charAt(0) == '\"' ||
-	                                 input.charAt(0) == '\'' ||
-	                                 input.charAt(0) == '(' ||
-	                                 input.charAt(0) == '[' ||
-	                                 input.charAt(0) == '<' ||
-	                                 input.charAt(0) == '{' ) )
+	    if(
+	    	(input.charAt(0) == '"' ||
+	         input.charAt(0) == '\'' ||
+	         input.charAt(0) == '(' ||
+	         input.charAt(0) == '[' ||
+	         input.charAt(0) == '<' ||
+	         input.charAt(0) == '{' ) )
 	    {
 	      return input.substring(0, 1);
 	    }
@@ -317,7 +323,7 @@ public class Translator {
 			        bugFix = false;
 			    }
 		    	if(bugFix)
-		    		return input.substring(0, 6);
+		    		return input.substring(6, input.length());
 	    }
 	    if( (input.length() > 4) && (input.charAt(4) == '\"' ||
 	                                      input.charAt(4) == '\'' ||
@@ -333,7 +339,7 @@ public class Translator {
 			        bugFix = false;
 			    }
 		    	if(bugFix)
-		    		return input.substring(0, 5);
+		    		return input.substring(5, input.length());
 	    }
 	    if( (input.length() > 3) && (input.charAt(3) == '\"' ||
 	                                      input.charAt(3) == '\'' ||
@@ -349,7 +355,7 @@ public class Translator {
 			        bugFix = false;
 			    }
 		    	if(bugFix)
-		    		return input.substring(0, 4);
+		    		return input.substring(4, input.length());
 	    }
 	    if( (input.length() > 2) && (input.charAt(2) == '\"' ||
 	                                      input.charAt(2) == '\'' ||
@@ -365,7 +371,7 @@ public class Translator {
 			        bugFix = false;
 			    }
 		    	if(bugFix)
-		    		return input.substring(0, 3);
+		    		return input.substring(3, input.length());
 	    }
 	    if( (input.length() > 1) && (input.charAt(1) == '\"' ||
 	                                      input.charAt(1) == '\'' ||
@@ -381,7 +387,7 @@ public class Translator {
 			        bugFix = false;
 			    }
 		    	if(bugFix)
-		    		return input.substring(0, 2);
+		    		return input.substring(2, input.length());
 	    }
 	    if( (input.length() > 0) && (input.charAt(0) == '\"' ||
 	                                      input.charAt(0) == '\'' ||
@@ -427,7 +433,7 @@ public class Translator {
 		        bugFix = false;
 		    }
 	    	if(bugFix)
-	    		return input.substring(input.length() - 6, input.length());
+	    		return input.substring(0, input.length() - 6);
 	    }
 	    if( (input.length() > 4) && (input.charAt(input.length() - 5) == '\"' ||
 	                                 input.charAt(input.length() - 5) == '\'' ||
@@ -449,7 +455,7 @@ public class Translator {
 		        bugFix = false;
 		    }
 	    	if(bugFix)
-	    		return input.substring(input.length() - 5, input.length());
+	    		return input.substring(0, input.length() - 5);
 	    }
 	    if( (input.length() > 3) && (input.charAt(input.length() - 4) == '\"' ||
 	                                 input.charAt(input.length() - 4) == '\'' ||
@@ -471,7 +477,7 @@ public class Translator {
 		        bugFix = false;
 		    }
 	    	if(bugFix)
-	    		return input.substring(input.length() - 4, input.length());
+	    		return input.substring(0, input.length() - 4);
 	    }
 	    if( (input.length() > 2) && (input.charAt(input.length() - 3) == '\"' ||
 	                                 input.charAt(input.length() - 3) == '\'' ||
@@ -493,7 +499,7 @@ public class Translator {
 		        bugFix = false;
 		    }
 	    	if(bugFix)
-	    		return input.substring(input.length() - 3, input.length());
+	    		return input.substring(0, input.length() - 3);
 	    }
 	    if( (input.length() > 1) && (input.charAt(input.length() - 2) == '\"' ||
 	                                 input.charAt(input.length() - 2) == '\'' ||
@@ -515,7 +521,7 @@ public class Translator {
 		        bugFix = false;
 		    }
 	    	if(bugFix)
-	    		return input.substring(input.length() - 2, input.length());
+	    		return input.substring(0, input.length() - 2);
 	    }
 	    if( (input.length() > 0) && (input.charAt(input.length() - 1) == '\"' ||
 	                                 input.charAt(input.length() - 1) == '\'' ||

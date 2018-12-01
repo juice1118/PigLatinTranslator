@@ -13,6 +13,7 @@ public class Utility {
 	  {
 	    return ( arrayToString( feedWords( stringToArray( input, spaceIndexes(input) ) ) ) );
 	  }
+	  
 	  //adds a space after each line drop and logs the positions of all spaces/////////////////////////////////////////////
 	  public static int[] spaceIndexes(String input)
 	  {
@@ -105,7 +106,14 @@ public class Utility {
 	    String output = new String("");
 	    for( int index = 0; index < input.length; index++)
 	    {
-	      output += input[index] + " ";
+	      if(input[index].endsWith("\n"))
+	      {
+	    	output += input[index];
+	      }
+	      else
+	      {
+	    	output += input[index] + " ";
+	      }
 	    }
 	    output.trim();
 	    return output;

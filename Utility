@@ -37,7 +37,7 @@ public class Utility {
 	      }
 	      else if(input.charAt(index) == 10)
 	      {
-	        input = input.substring(0, index + 1) + (" ") + input.substring(index + 2, input.length());
+	        input = input.substring(0, index + 1) + (" ") + input.substring(index + 1, input.length());
 	      }
 	      else if(input.charAt(index) == ' ')
 	      {
@@ -65,6 +65,19 @@ public class Utility {
 	    String[] output = new String[1];
 	    output[0] = input;
 	    return output;
+	    }
+	    
+	    int maxLineDrops = 30;
+	    for(int index = 0; index < input.length() + maxLineDrops; index++)
+	    {
+	      if(index > input.length() -1)
+	      {
+	        break;
+	      }
+	      else if(input.charAt(index) == 10)
+	      {
+	        input = input.substring(0, index + 1) + (" ") + input.substring(index + 1, input.length());
+	      }
 	    }
 	    
 	    String[] output = new String[positions.length - 1];

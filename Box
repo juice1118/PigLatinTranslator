@@ -6,43 +6,88 @@
  */
 
 import java.awt.event.*;
+import java.awt.Font;
+import java.awt.Color;
 import javax.swing.*;
 
-public class Box
-{
-  public static void main(String[] args)
-  {
-    //makes a box
-    JFrame f=new JFrame("PigLatinTranslator");
+public class Box {
+	public static void main(String[] args)
+	  {
+	    //makes a box
+	    JFrame f=new JFrame("PigLatinTranslator");
 
-    //makes a text field and sets its bounds
-    final JTextArea inputtf = new JTextArea("Enter text to be translated.");
-    inputtf.setBounds(45, 50, 900, 30);
-    
-    //makes an output text field and sets its bounds
-    final JTextArea outputtf = new JTextArea("Enterway exttay otay ebay anslatedtray.");
-    outputtf.setBounds(45, 150, 900, 30);
-    
-    //makes a button and sets its bounds
-    JButton b = new JButton("Translate");
-    b.setBounds(50,100,95,30);
-    
-    //sets action to occur when the button is clicked
-    b.addActionListener(new ActionListener()
-     {
-      public void actionPerformed(ActionEvent e)
-        {//pig latin translation         
-          outputtf.setText( Utility.totalTranslate( inputtf.getText()) );
-        }
-     }
-    );
-    
-    f.add(b);
-    f.add(inputtf);
-    f.add(outputtf);
-    f.setSize(1000, 275);
-    f.setLayout(null);
-    f.setVisible(true);
-  }
+	    //makes a text field and sets its bounds
+	    final JTextArea inputtf = new JTextArea("");
+	    inputtf.setBounds(45, 25, 1265, 275);
+	    inputtf.setFont(new Font("Serif", 3, 15));
+	    
+	    //makes an output text field and sets its bounds
+	    final JTextArea outputtf = new JTextArea("");
+	    outputtf.setBounds(45, 400, 1265, 275);
+	    outputtf.setEditable(false);
+	    outputtf.setFont(new Font("Serif", 3, 15));
+	    
+	    //sets text field to hold instructions
+	    final JTextArea instructionstf = new JTextArea("Enter text to be translated. Do Not Exceed This Length On One Line.------------------------------------------|");
+	    instructionstf.setBounds(45, 5, 1265, 275);
+	    instructionstf.setEditable(false);
+	    instructionstf.setFont(new Font("SansSerif", 3, 15));
+	    
+	    //extra balancing text field
+	    final JTextArea extratf = new JTextArea("");
+	    extratf.setBounds(45, 417, 1265, 275);
+	    extratf.setEditable(false);
+	    extratf.setFont(new Font("Serif", 3, 15));
+	    
+	    //makes a button and sets its bounds
+	    JButton b = new JButton("Translate");
+	    b.setBounds(180, 327, 95, 45);
+	    
+	    JButton c = new JButton("Reset");
+	    c.setBounds(1080, 327, 95, 45);
+	    
+	    //sets action to occur when the button is clicked
+	    b.addActionListener(new ActionListener()
+	     {
+	    	//pig latin translation
+	      public void actionPerformed(ActionEvent e)
+	        {         
+	          outputtf.setText( Utility.totalTranslate( inputtf.getText()) );
+	          instructionstf.setVisible(false);
+	          extratf.setVisible(false);
+	        }
+	     }
+	    );
+	    
+	  //sets action to occur when the button is clicked
+	    c.addActionListener(new ActionListener()
+	     {
+	    	//pig latin translation
+	      public void actionPerformed(ActionEvent e)
+	        {
+	    	  inputtf.setText("");
+	          outputtf.setText("");
+	          instructionstf.setVisible(true);
+	          extratf.setVisible(true);
+	          instructionstf.setText("Enter text to be translated. Do Not Exceed This Length On One Line.------------------------------------------|");
+	        }
+	     }
+	    );
+	    
+	    f.getContentPane().setBackground( new Color(7, 134, 66) );
+	    inputtf.setBackground( new Color(7, 134, 117) );
+	    outputtf.setBackground( new Color(7, 134, 117) );
+	    instructionstf.setBackground( new Color(7, 134, 117) );
+	    extratf.setBackground( new Color(7, 134, 117) );
+	    
+	    f.add(b);
+	    f.add(c);
+	    f.add(inputtf);
+	    f.add(outputtf);
+	    f.add(instructionstf);
+	    f.add(extratf);
+	    f.setSize(1367, 735);
+	    f.setLayout(null);
+	    f.setVisible(true);
+	  }
 }
-

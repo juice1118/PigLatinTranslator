@@ -1,0 +1,120 @@
+/*The Punctuation class contains methods to remove and add punctuation to words that are going to be translated
+	 * 
+	 * @authors Nikhil Maserang and Julius Gomez
+	 * @version 1.0
+	 * @since 2018-11-30
+	 */
+   
+   //this removes and improves the punctuation handling from the Translator file
+public class Punctuation {
+	//check if there is a line return////////////////////////////////////////////////////////////////////////////////////
+	  public static boolean lineReturn(String input)
+	  {
+		if(input.length() == 0)
+	    {
+		  return (false);
+	    }
+	    if(input.charAt(input.length()-1) == (char)(10))
+	    {
+	      return true;
+	    }
+	    return false;
+	  }
+	  
+	  public static String findStartPunct(String input)
+	  {
+		  boolean letters = true;
+		  for(int i = input.length() - 1; i > -1; i--)
+		  {
+			  letters = true;
+			  if(input.toLowerCase().charAt(i) > 122 || input.toLowerCase().charAt(i) < 97 )
+			  {
+				  for(int j = 97; j < 123; j++)
+				  {
+					  if( !(input.toLowerCase().substring(0, i).indexOf((char)(j)) == -1) )
+					  {
+						  letters = true;
+						  break;
+					  }
+					  else
+					  letters = false;
+				  }
+			  }
+			  if(!letters)
+			  return (input.substring(0, i + 1));
+		  }
+		  return "";
+	  }
+	  
+	  public static String removeStartPunct(String input)
+	  {
+		  boolean letters = true;
+		  for(int i = input.length() - 1; i > -1; i--)
+		  {
+			  letters = true;
+			  if(input.toLowerCase().charAt(i) > 122 || input.toLowerCase().charAt(i) < 97 )
+			  {
+				  for(int j = 97; j < 123; j++)
+				  {
+					  if( !(input.toLowerCase().substring(0, i).indexOf((char)(j)) == -1) )
+					  {
+						  letters = true;
+						  break;
+					  }
+					  else
+					  letters = false;
+				  }
+			  }
+			  if(!letters)
+			  return (input.substring(i + 1, input.length()));
+		  }
+		  return "";
+	  }
+	  
+	  public static String findEndPunct(String input)
+	  {boolean letters = true;
+		  for(int i = 0; i < input.length(); i++)
+		  {
+			  letters = true;
+			  if(input.toLowerCase().charAt(i) > 122 || input.toLowerCase().charAt(i) < 97 )
+			  {
+				  for(int j = 97; j < 123; j++)
+				  {
+					  if( !(input.toLowerCase().substring(i + 1, input.length()).indexOf((char)(j)) == -1) )
+					  {
+						  letters = true;
+						  break;
+					  }
+					  else
+					  letters = false;
+				  }
+			  }
+			  if(!letters)
+			  return (input.substring(i, input.length()));
+		  }
+		  return "";
+	  }
+	  
+	  public static String removeEndPunct(String input)
+	  {
+		  boolean letters = true;
+		  for(int i = 0; i < input.length(); i++)
+		  {
+			  letters = true;
+			  if(input.toLowerCase().charAt(i) > 122 || input.toLowerCase().charAt(i) < 97 )
+			  {
+				  for(int j = 97; j < 123; j++)
+				  {
+					  if( !(input.toLowerCase().substring(i + 1, input.length()).indexOf((char)(j)) == -1) )
+					  {
+						  letters = true;
+						  break;
+					  }
+				  }
+			  }
+			  if(!letters)
+			  return (input.substring(0, i));
+		  }
+		  return "";
+	  }
+}

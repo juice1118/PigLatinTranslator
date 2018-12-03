@@ -11,13 +11,33 @@ public class Utility {
 	 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	  public static String totalTranslate(String input)
 	  {
-	    return ( arrayToString( feedWords( stringToArray( input, spaceIndexes(input) ) ) ) );
+	    return ( arrayToString( feedWords( stringToArray( addSpaces(input), spaceIndexes(addSpaces(input)) ) ) ) );
 	  }
 	  
-	  //adds a space after each line drop and logs the positions of all spaces/////////////////////////////////////////////
+	  //adds a space after each line drop
+	  public static String addSpaces(String input)
+	  {
+		  int maxLineDrops = 30;
+		  for(int index = 0; index < input.length() + maxLineDrops; index++)
+		    {
+		      if(index > input.length() -1)
+		      {
+		        break;
+		      }
+		      if(input.charAt(index) == 10)
+		      {
+		    	  if(input.charAt(index + 1) != ' ')
+		    	  {
+		    		  input = input.substring(0, index + 1) + (" ") + input.substring(index + 1, input.length());
+		    	  }
+		      }
+		    }
+		  return input;
+	  }
+	  
+	  //logs the positions of all spaces/////////////////////////////////////////////
 	  public static int[] spaceIndexes(String input)
 	  {
-	    
 	    //if input is a single word
 	    if(input.indexOf(' ') == -1 && input.indexOf( (char)(10) ) == -1)
 	    {
@@ -26,21 +46,16 @@ public class Utility {
 	    }
 	    
 	    //finds positions of spaces
-	    int maxLineDrops = 30;
 	    ArrayList<Integer> spacePositions= new ArrayList<Integer>(0);
 	    spacePositions.add(-1);
 	    
-	    for(int index = 0; index < input.length() + maxLineDrops; index++)
+	    for(int index = 0; index < input.length(); index++)
 	    {
-	      if(index > input.length() -1)
+	      if(index > input.length() - 1)
 	      {
 	        break;
 	      }
-	      else if(input.charAt(index) == 10)
-	      {
-	        input = input.substring(0, index + 1) + (" ") + input.substring(index + 1, input.length());
-	      }
-	      else if(input.charAt(index) == ' ')
+	      if(input.charAt(index) == ' ')
 	      {
 	        spacePositions.add(index);
 	      }
@@ -66,19 +81,6 @@ public class Utility {
 	    String[] output = new String[1];
 	    output[0] = input;
 	    return output;
-	    }
-	    
-	    int maxLineDrops = 30;
-	    for(int index = 0; index < input.length() + maxLineDrops; index++)
-	    {
-	      if(index > input.length() -1)
-	      {
-	        break;
-	      }
-	      else if(input.charAt(index) == 10)
-	      {
-	        input = input.substring(0, index + 1) + (" ") + input.substring(index + 1, input.length());
-	      }
 	    }
 	    
 	    String[] output = new String[positions.length - 1];

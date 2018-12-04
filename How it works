@@ -10,3 +10,4 @@ punctuation methods, checks for line drops with the lineDrop method, and then re
 the punctuation (we need 4 functions instead of 2 because each function can only return one value, and we don't want to create a
 class object for each word). Then the word is translated with the translate method and the punctuation/line drops are readded.
 There is also a method for if two words separated by dashes/slashes (like that) are sent in. Thats all folks!
+Note: There is no punctuation2 class because its methods were inside translator for the 1.0 version.

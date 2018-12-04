@@ -1,7 +1,7 @@
 /*The Box class takes user input, translates it using methods from the Utility and Translator classes, and then displays it
  * 
  * @authors Nikhil Maserang and Julius Gomez
- * @version 1.0
+ * @version 2.0
  * @since 2018-11-30
  */
 

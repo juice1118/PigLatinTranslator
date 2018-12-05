@@ -22,6 +22,17 @@ public class Punctuation {
      return false;
    }
    
+   //checks if a word contains any letters//////////////////////////////////////////////////////////////////////
+   public static boolean containsLetters(String input)
+   {
+    for(int i = 97; i < 123; i++)
+    {
+      if( !(input.toLowerCase().indexOf((char)(i)) == -1) )
+        return true;
+    }
+    return false;
+   }
+   
    //returns the punctation at the beginning of a word/////////////////////////////////////////////////////////////////
    public static String findStartPunct(String input)
    {
@@ -30,19 +41,10 @@ public class Punctuation {
       return ("");
     }
     
-    boolean onlyPunct = true;
-    for(int i = 97; i < 123; i++)
+    if(!containsLetters(input))
     {
-      if( !(input.toLowerCase().indexOf((char)(i)) == -1) )
-      {
-        onlyPunct = false;
-        break;
-      }
-      else
-        onlyPunct = true;
-    }
-    if(onlyPunct)
       return ("");
+    }
     
     boolean letters = true;
     for(int i = input.length() - 1; i > -1; i--)
@@ -75,19 +77,10 @@ public class Punctuation {
       return ("");
     }
     
-    boolean onlyPunct = true;
-    for(int i = 97; i < 123; i++)
+    if(!containsLetters(input))
     {
-      if( !(input.toLowerCase().indexOf((char)(i)) == -1) )
-      {
-        onlyPunct = false;
-        break;
-      }
-      else
-        onlyPunct = true;
-    }
-    if(onlyPunct)
       return ("");
+    }
     
     boolean letters = true;
     for(int i = input.length() - 1; i > -1; i--)
@@ -120,19 +113,10 @@ public class Punctuation {
       return ("");
     }
     
-    boolean onlyPunct = true;
-    for(int i = 97; i < 123; i++)
+    if(!containsLetters(input))
     {
-      if( !(input.toLowerCase().indexOf((char)(i)) == -1) )
-      {
-        onlyPunct = false;
-        break;
-      }
-      else
-        onlyPunct = true;
-    }
-    if(onlyPunct)
       return ("");
+    }
     
     boolean letters = true;
     for(int i = 0; i < input.length(); i++)
@@ -165,19 +149,10 @@ public class Punctuation {
       return ("");
     }
     
-    boolean onlyPunct = true;
-    for(int i = 97; i < 123; i++)
+    if(!containsLetters(input))
     {
-      if( !(input.toLowerCase().indexOf((char)(i)) == -1) )
-      {
-        onlyPunct = false;
-        break;
-      }
-      else
-        onlyPunct = true;
-    }
-    if(onlyPunct)
       return ("");
+    }
     
     boolean letters = true;
     for(int i = 0; i < input.length(); i++)

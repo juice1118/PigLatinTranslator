@@ -101,5 +101,6 @@ public class Box {
 	    f.setSize(1367, 735);
 	    f.setLayout(null);
 	    f.setVisible(true);
+	    f.setResizeable(false);
 	  }
 }

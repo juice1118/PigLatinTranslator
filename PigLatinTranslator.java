@@ -187,19 +187,15 @@ public class PigLatinTranslator extends JFrame
     private void translateToEnglish(String input)
     {
       englishWord = handleEndPunctuation(input);
-      englishWord = handleStartPunctuation(input);
+      englishWord = handleStartPunctuation(englishWord);
       pigLatinWord = translateWordToPigLatin(englishWord);
     }
     
     private void translateToPigLatin(String input)
     {
-      System.out.println(input);
       pigLatinWord = handleEndPunctuation(input);
-      System.out.println(pigLatinWord);
-      pigLatinWord = handleStartPunctuation(input);
-      System.out.println(pigLatinWord);
+      pigLatinWord = handleStartPunctuation(pigLatinWord);
       englishWord = translateWordToEnglish(pigLatinWord);
-      System.out.println(englishWord);
     }
     
     private String handleStartPunctuation(String input)
@@ -226,9 +222,13 @@ public class PigLatinTranslator extends JFrame
             break;
           }
         }
+        if(i == 0)
+        {
+          wordWithNoStartPunctuation = input;
+          startPunct = "";
+        }
       }
       
-      System.out.println(wordWithNoStartPunctuation);
       return wordWithNoStartPunctuation;
     }
   
@@ -256,9 +256,13 @@ public class PigLatinTranslator extends JFrame
             break;
           }
         }
+        if(i == input.length() - 1)
+        {
+          wordWithNoEndPunctuation = input;
+          endPunct = "";
+        }
       }
       
-      System.out.println(wordWithNoEndPunctuation);
       return wordWithNoEndPunctuation;
   }
     
@@ -273,8 +277,3 @@ public class PigLatinTranslator extends JFrame
     }
   }
 }
-
-//    (     y     o     u     '     r     e     )     .
-
-
-

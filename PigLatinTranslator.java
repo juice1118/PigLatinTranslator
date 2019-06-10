@@ -232,7 +232,7 @@ public class PigLatinTranslator extends JFrame
       return wordWithNoStartPunctuation;
     }
   
-  private String handleEndPunctuation(String input)
+    private String handleEndPunctuation(String input)
     {
       boolean letters = false;
       String wordWithNoEndPunctuation = new String("");
@@ -264,7 +264,7 @@ public class PigLatinTranslator extends JFrame
       }
       
       return wordWithNoEndPunctuation;
-  }
+    }
     
     public String translateWordToEnglish(String input)
     {

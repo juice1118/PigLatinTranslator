@@ -184,14 +184,14 @@ public class PigLatinTranslator extends JFrame
       return startPunct + englishWord + endPunct;
     }
     
-    private void translateToEnglish(String input)
+    private void translateToPigLatin(String input)
     {
       englishWord = handleEndPunctuation(input);
       englishWord = handleStartPunctuation(englishWord);
       pigLatinWord = translateWordToPigLatin(englishWord);
     }
     
-    private void translateToPigLatin(String input)
+    private void translateToEnglish(String input)
     {
       pigLatinWord = handleEndPunctuation(input);
       pigLatinWord = handleStartPunctuation(pigLatinWord);
@@ -268,12 +268,12 @@ public class PigLatinTranslator extends JFrame
     
     public String translateWordToEnglish(String input)
     {
-      return input;
+      return "e" + input + "e";
     }
     
     public String translateWordToPigLatin(String input)
     {
-      return input;
+      return "p" + input + "p";
     }
   }
 }
